@@ -1,0 +1,89 @@
+/* Import the Ubuntu font */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+
+/* Basic reset for margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    background-color: #121212; /* Dark background for dark mode */
+    color: white; /* White text */
+    font-family: 'Ubuntu', sans-serif; /* Ubuntu font */
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Main container */
+#content {
+    position: relative;
+    text-align: center;
+}
+
+/* Heading Styling */
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/* Message in the bottom-right corner with a downward angle */
+#message {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    transform: rotate(45deg); /* Angle the text */
+    color: #ff5722; /* A nice accent color for the message */
+    letter-spacing: 1px;
+}
+
+/* Optional: Smooth transition for the message */
+#message {
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+/* Fade-in animation for the message */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Responsive design (adjustments for smaller screens) */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    #message {
+        font-size: 1.2rem;
+        bottom: 15px;
+        right: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    #message {
+        font-size: 1rem;
+        bottom: 10px;
+        right: 10px;
+    }
+}
